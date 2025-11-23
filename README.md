@@ -121,42 +121,7 @@ curl -o "filename.txt" http://localhost:8088/download/{fileID}
 
 ```bash
 antonin@Antonin ~> curl -T test.txt -H "X-Upload-Password: demo" https://qcus.outerark.com
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-                                                                      
-
+<qr-code>
 File uploaded successfully!
 Original name: test.txt
 File size: 14 B
