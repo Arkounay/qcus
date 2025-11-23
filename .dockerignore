@@ -1,0 +1,39 @@
+# Git
+.git
+.gitignore
+
+# Node
+node_modules/
+npm-debug.log
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go-quick-cli-upload-server
+server
+
+# Build outputs
+public/assets/
+
+# Uploads (will be created in container)
+uploads/
+
+# Documentation
+README.md
+*.md
+
+# IDE
+.vscode/
+.idea/
+.claude/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

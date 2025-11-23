@@ -1,0 +1,37 @@
+# Uploads directory
+uploads/
+
+# Node modules and build artifacts
+node_modules/
+public/assets/
+dist/
+build/
+
+# Go binary
+go-quick-cli-upload-server
+server
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+**/.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+.claude/
+
+# Temporary files
+*.tmp
+*.temp
