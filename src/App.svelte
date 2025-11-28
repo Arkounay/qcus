@@ -163,7 +163,7 @@
 									Method 1: Multipart form upload
 								</h4>
 								<CodeBlock
-									code={`curl -F "file=@yourfile.txt" -H "X-Upload-Password: ${showDefaultPasswordHint ? 'demo' : 'YOUR_PASSWORD'}" http://${window.location.host}`}
+									code={`curl -F "file=@yourfile.txt" -H "X-Upload-Password: ${showDefaultPasswordHint ? 'demo' : 'YOUR_PASSWORD'}" ${window.location.protocol}//${window.location.host}`}
 								/>
 							</div>
 
@@ -172,11 +172,11 @@
 									Method 2: Direct file upload (filename from URL path)
 								</h4>
 								<CodeBlock
-									code={`curl -T yourfile.txt -H "X-Upload-Password: ${showDefaultPasswordHint ? 'demo' : 'YOUR_PASSWORD'}" http://${window.location.host}/yourfile.txt`}
+									code={`curl -T yourfile.txt -H "X-Upload-Password: ${showDefaultPasswordHint ? 'demo' : 'YOUR_PASSWORD'}" ${window.location.protocol}//${window.location.host}/yourfile.txt`}
 								/>
 								<div class="mt-2">
 									<CodeBlock
-										code={`curl --upload-file yourfile.txt -H "X-Upload-Password: ${showDefaultPasswordHint ? 'demo' : 'YOUR_PASSWORD'}" http://${window.location.host}/yourfile.txt`}
+										code={`curl --upload-file yourfile.txt -H "X-Upload-Password: ${showDefaultPasswordHint ? 'demo' : 'YOUR_PASSWORD'}" ${window.location.protocol}//${window.location.host}/yourfile.txt`}
 									/>
 								</div>
 							</div>
@@ -186,13 +186,13 @@
 								<CodeBlock
                                     showCopyButton={false}
 									leadingRelaxed={true}
-									code={`$ curl -F "file=@example.txt" -H "X-Upload-Password: ${showDefaultPasswordHint ? 'demo' : 'YOUR_PASSWORD'}" http://${window.location.host}
+									code={`$ curl -F "file=@example.txt" -H "X-Upload-Password: ${showDefaultPasswordHint ? 'demo' : 'YOUR_PASSWORD'}" ${window.location.protocol}//${window.location.host}
 <qr code>
 File uploaded successfully!
 Original name: example.txt
-Download URL: http://${window.location.host}/download/a1b2c3d4e5f6...
-cURL command: curl -o "example.txt" http://${window.location.host}/download/a1b2c3d4e5f6...`}
-									textToCopy={`curl -F "file=@example.txt" -H "X-Upload-Password: ${showDefaultPasswordHint ? 'demo' : 'YOUR_PASSWORD'}" http://${window.location.host}`}
+Download URL: ${window.location.protocol}//${window.location.host}/download/a1b2c3d4e5f6...
+cURL command: curl -o "example.txt" ${window.location.protocol}//${window.location.host}/download/a1b2c3d4e5f6...`}
+									textToCopy={`curl -F "file=@example.txt" -H "X-Upload-Password: ${showDefaultPasswordHint ? 'demo' : 'YOUR_PASSWORD'}" ${window.location.protocol}//${window.location.host}`}
 								/>
 							</div>
 						</div>

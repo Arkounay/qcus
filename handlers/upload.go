@@ -211,7 +211,17 @@ func (h *UploadHandler) sendSuccessResponse(w http.ResponseWriter, r *http.Reque
 		originalName = fileID
 	}
 
-	downloadURL := fmt.Sprintf("http://%s/download/%s", r.Host, fileID)
+	// Determine the scheme (http or https)
+	scheme := "http"
+	if r.TLS != nil {
+		scheme = "https"
+	}
+	// Check X-Forwarded-Proto header for reverse proxy setups
+	if proto := r.Header.Get("X-Forwarded-Proto"); proto != "" {
+		scheme = proto
+	}
+
+	downloadURL := fmt.Sprintf("%s://%s/download/%s", scheme, r.Host, fileID)
 	curlCommand := fmt.Sprintf("curl -o \"%s\" %s", originalName, downloadURL)
 	fileSizeStr := formatFileSize(fileSize)
 
